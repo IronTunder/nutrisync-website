@@ -95,19 +95,17 @@ document.addEventListener('DOMContentLoaded', function() {
                     icon.classList.toggle('fa-chevron-down');
                     icon.classList.toggle('fa-chevron-up');
                 }
-                
-                // Opzionale: chiudi altre FAQ
-                // faqQuestions.forEach(otherQuestion => {
-                //     if (otherQuestion !== question) {
-                //         const otherAnswer = otherQuestion.nextElementSibling;
-                //         const otherIcon = otherQuestion.querySelector('i');
-                //         otherAnswer.classList.remove('active');
-                //         if (otherIcon) {
-                //             otherIcon.classList.remove('fa-chevron-up');
-                //             otherIcon.classList.add('fa-chevron-down');
-                //         }
-                //     }
-                // });
+                faqQuestions.forEach(otherQuestion => {
+                    if (otherQuestion !== question) {
+                        const otherAnswer = otherQuestion.nextElementSibling;
+                        const otherIcon = otherQuestion.querySelector('i');
+                        otherAnswer.classList.remove('active');
+                        if (otherIcon) {
+                            otherIcon.classList.remove('fa-chevron-up');
+                            otherIcon.classList.add('fa-chevron-down');
+                        }
+                    }
+                });
             });
         });
     }
