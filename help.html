@@ -8,16 +8,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
-        /* Aggiungi questi stili per l'accordion */
+        /* Stili specifici per l'accordion in help.html */
         .faq-answer {
-            max-height: 0;
+            display: none;
+            padding: 0;
             overflow: hidden;
-            transition: max-height 0.3s ease-out;
+            transition: all 0.3s ease;
         }
 
+        .faq-answer.show {
+            display: block;
+            padding: 1.5rem;
+        }
+
+        /* Assicurati che lo stile originale non interferisca */
         .faq-answer.active {
-            max-height: 1000px; /* Valore abbastanza grande per contenere il contenuto */
-            transition: max-height 0.5s ease-in;
+            display: block !important;
+            padding: 1.5rem !important;
+            max-height: none !important;
         }
     </style>
 </head>
@@ -55,8 +63,8 @@
         <div class="search-section">
             <div class="search-box">
                 <i class="fas fa-search"></i>
-                <input type="text" placeholder="Cerca tra le domande frequenti...">
-                <button class="search-btn">Cerca</button>
+                <input type="text" id="faqSearch" placeholder="Cerca tra le domande frequenti...">
+                <button class="search-btn" id="searchBtn">Cerca</button>
             </div>
         </div>
 
@@ -74,9 +82,10 @@
             <!-- Account FAQ -->
             <div class="faq-category" id="account">
                 <h2><i class="fas fa-user-circle"></i> Account e Registrazione</h2>
+
                 <div class="faq-item">
                     <button class="faq-question">
-                        Come creo un account su NutriSync?
+                        <span>Come creo un account su NutriSync?</span>
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
@@ -95,7 +104,7 @@
 
                 <div class="faq-item">
                     <button class="faq-question">
-                        Ho dimenticato la password, cosa devo fare?
+                        <span>Ho dimenticato la password, cosa devo fare?</span>
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
@@ -113,7 +122,7 @@
 
                 <div class="faq-item">
                     <button class="faq-question">
-                        Come elimino il mio account?
+                        <span>Come elimino il mio account?</span>
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
@@ -137,9 +146,10 @@
             <!-- Features FAQ -->
             <div class="faq-category" id="features">
                 <h2><i class="fas fa-star"></i> Funzionalità dell'App</h2>
+
                 <div class="faq-item">
                     <button class="faq-question">
-                        Come aggiungo un pasto al diario?
+                        <span>Come aggiungo un pasto al diario?</span>
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
@@ -159,7 +169,7 @@
 
                 <div class="faq-item">
                     <button class="faq-question">
-                        Come attivo le notifiche promemoria?
+                        <span>Come attivo le notifiche promemoria?</span>
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
@@ -178,7 +188,7 @@
 
                 <div class="faq-item">
                     <button class="faq-question">
-                        Come cambio tra tema chiaro e scuro?
+                        <span>Come cambio tra tema chiaro e scuro?</span>
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
@@ -202,9 +212,10 @@
             <!-- Technical FAQ -->
             <div class="faq-category" id="technical">
                 <h2><i class="fas fa-tools"></i> Problemi Tecnici</h2>
+
                 <div class="faq-item">
                     <button class="faq-question">
-                        L'app si blocca o crasha, cosa posso fare?
+                        <span>L'app si blocca o crasha, cosa posso fare?</span>
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
@@ -226,7 +237,7 @@
 
                 <div class="faq-item">
                     <button class="faq-question">
-                        I dati non si sincronizzano correttamente
+                        <span>I dati non si sincronizzano correttamente</span>
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
@@ -239,6 +250,51 @@
                             <li>Controlla che l'app abbia i permessi necessari</li>
                             <li>Prova a fare logout e login</li>
                             <li>Forza la sincronizzazione manuale nelle impostazioni</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Privacy FAQ -->
+            <div class="faq-category" id="privacy">
+                <h2><i class="fas fa-shield-alt"></i> Privacy e Sicurezza</h2>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>I miei dati sono sicuri?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Sì, la sicurezza dei tuoi dati è la nostra priorità:
+                        </p>
+                        <ul>
+                            <li>Tutti i dati sono crittografati in transito e a riposo</li>
+                            <li>Utilizziamo protocolli di sicurezza avanzati</li>
+                            <li>Non vendiamo mai i tuoi dati a terze parti</li>
+                            <li>Puoi eliminare i tuoi dati in qualsiasi momento</li>
+                        </ul>
+                        <p>
+                            Per maggiori dettagli, consulta la nostra <a href="privacy.html">Privacy Policy</a>.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Come posso esportare i miei dati?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Per esportare i tuoi dati:
+                        </p>
+                        <ol>
+                            <li>Vai su "Impostazioni"</li>
+                            <li>Seleziona "Privacy"</li>
+                            <li>Tocca "Esporta dati"</li>
+                            <li>Scegli il formato (JSON o CSV)</li>
+                            <li>I dati saranno inviati alla tua email</li>
                         </ol>
                     </div>
                 </div>
@@ -290,64 +346,89 @@
     </div>
 </footer>
 
-<script src="assets/script.js"></script>
+<!-- Non caricare assets/script.js per evitare conflitti -->
 <script>
-    // Script specifico per help.html - rimuove il conflitto con assets/script.js
+    // Script dedicato solo per help.html
     document.addEventListener('DOMContentLoaded', function() {
-        // FAQ accordion functionality
+        console.log('Script help.html caricato');
+
+        // Menu toggle per mobile (versione semplice)
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', () => {
+                console.log('Menu toggle cliccato');
+                navMenu.classList.toggle('active');
+            });
+
+            // Chiudi menu quando si clicca un link
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                });
+            });
+        }
+
+        // Gestione accordion FAQ
         const faqQuestions = document.querySelectorAll('.faq-question');
+        console.log('FAQ questions trovate:', faqQuestions.length);
 
-        // Chiudi tutte le risposte all'inizio
-        document.querySelectorAll('.faq-answer').forEach(answer => {
-            answer.classList.remove('active');
-        });
-
-        // Aggiungi event listener per ogni domanda
         faqQuestions.forEach(question => {
-            question.addEventListener('click', () => {
-                const answer = question.nextElementSibling;
-                const icon = question.querySelector('i');
+            question.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
 
-                // Se la risposta è già aperta, la chiudi
-                if (answer.classList.contains('active')) {
-                    answer.classList.remove('active');
-                    icon.classList.remove('fa-chevron-up');
-                    icon.classList.add('fa-chevron-down');
-                } else {
-                    // Altrimenti, chiudi tutte le altre e apri questa
-                    document.querySelectorAll('.faq-answer').forEach(otherAnswer => {
-                        otherAnswer.classList.remove('active');
-                    });
+                console.log('FAQ cliccata:', this.querySelector('span').textContent);
 
-                    document.querySelectorAll('.faq-question i').forEach(otherIcon => {
-                        otherIcon.classList.remove('fa-chevron-up');
-                        otherIcon.classList.add('fa-chevron-down');
-                    });
+                const answer = this.nextElementSibling;
+                const icon = this.querySelector('i');
 
+                // Controlla se questa risposta è già aperta
+                const isOpen = answer.classList.contains('active');
+
+                // Chiudi tutte le risposte
+                document.querySelectorAll('.faq-answer').forEach(ans => {
+                    ans.classList.remove('active');
+                });
+
+                // Resetta tutte le icone
+                document.querySelectorAll('.faq-question i').forEach(ico => {
+                    ico.classList.remove('fa-chevron-up');
+                    ico.classList.add('fa-chevron-down');
+                });
+
+                // Se non era aperta, aprilà ora
+                if (!isOpen) {
                     answer.classList.add('active');
                     icon.classList.remove('fa-chevron-down');
                     icon.classList.add('fa-chevron-up');
+
+                    // Scorri per mostrare la risposta (opzionale)
+                    setTimeout(() => {
+                        answer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    }, 300);
                 }
             });
         });
 
-        // Category filtering
+        // Filtro categorie
         const categoryButtons = document.querySelectorAll('.category-btn');
         const faqCategories = document.querySelectorAll('.faq-category');
 
         categoryButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const category = button.dataset.category;
+            button.addEventListener('click', function() {
+                const category = this.getAttribute('data-category');
 
-                // Update active button
+                // Aggiorna il bottone attivo
                 categoryButtons.forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
+                this.classList.add('active');
 
-                // Show/hide categories
+                // Mostra/nascondi categorie
                 if (category === 'all') {
                     faqCategories.forEach(cat => {
                         cat.style.display = 'block';
-                        // Mostra tutti gli item FAQ all'interno
+                        // Mostra tutte le domande in questa categoria
                         cat.querySelectorAll('.faq-item').forEach(item => {
                             item.style.display = 'block';
                         });
@@ -356,7 +437,7 @@
                     faqCategories.forEach(cat => {
                         if (cat.id === category) {
                             cat.style.display = 'block';
-                            // Mostra tutti gli item FAQ all'interno
+                            // Mostra tutte le domande in questa categoria
                             cat.querySelectorAll('.faq-item').forEach(item => {
                                 item.style.display = 'block';
                             });
@@ -377,17 +458,25 @@
             });
         });
 
-        // Search functionality
-        const searchInput = document.querySelector('.search-box input');
-        const searchButton = document.querySelector('.search-btn');
+        // Funzionalità di ricerca
+        const searchInput = document.getElementById('faqSearch');
+        const searchButton = document.getElementById('searchBtn');
 
-        searchButton.addEventListener('click', performSearch);
-        searchInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') performSearch();
-        });
+        if (searchButton) {
+            searchButton.addEventListener('click', performSearch);
+        }
+
+        if (searchInput) {
+            searchInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    performSearch();
+                }
+            });
+        }
 
         function performSearch() {
             const searchTerm = searchInput.value.toLowerCase().trim();
+
             if (!searchTerm) {
                 // Se la ricerca è vuota, mostra tutto
                 document.querySelectorAll('.faq-item').forEach(item => {
@@ -396,42 +485,40 @@
                 return;
             }
 
+            // Mostra prima tutte le categorie
+            faqCategories.forEach(cat => {
+                cat.style.display = 'block';
+            });
+
             // Cerca in tutte le FAQ
             let foundAny = false;
             document.querySelectorAll('.faq-item').forEach(item => {
-                const questionText = item.querySelector('.faq-question').textContent.toLowerCase();
+                const questionElement = item.querySelector('.faq-question span');
+                const questionText = questionElement ? questionElement.textContent.toLowerCase() : '';
                 const answer = item.querySelector('.faq-answer');
-                const answerText = answer.textContent.toLowerCase();
+                const answerText = answer ? answer.textContent.toLowerCase() : '';
 
                 if (questionText.includes(searchTerm) || answerText.includes(searchTerm)) {
                     item.style.display = 'block';
                     foundAny = true;
-
-                    // Evidenzia il termine cercato (opzionale)
-                    if (!item.classList.contains('highlighted')) {
-                        item.classList.add('highlighted');
-                    }
                 } else {
                     item.style.display = 'none';
-                    item.classList.remove('highlighted');
                 }
             });
 
             // Se non trova nulla, mostra un messaggio
             if (!foundAny) {
                 alert('Nessun risultato trovato per: "' + searchTerm + '"');
+                // Ripristina tutte le domande
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.style.display = 'block';
+                });
             }
         }
 
-        // Menu toggle per mobile - rimuovi il listener duplicato
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navMenu = document.querySelector('.nav-menu');
-
-        // Chiudi menu quando si clicca un link
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-            });
+        // Chiudi tutte le risposte all'inizio
+        document.querySelectorAll('.faq-answer').forEach(answer => {
+            answer.classList.remove('active');
         });
     });
 </script>

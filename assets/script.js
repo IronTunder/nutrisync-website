@@ -81,35 +81,6 @@ document.addEventListener('DOMContentLoaded', function() {
         return re.test(email);
     }
     
-    // FAQ accordion (se presente)
-    const faqQuestions = document.querySelectorAll('.faq-question');
-    if (faqQuestions.length > 0) {
-        faqQuestions.forEach(question => {
-            question.addEventListener('click', () => {
-                const answer = question.nextElementSibling;
-                const icon = question.querySelector('i');
-                
-                // Toggle current answer
-                answer.classList.toggle('active');
-                if (icon) {
-                    icon.classList.toggle('fa-chevron-down');
-                    icon.classList.toggle('fa-chevron-up');
-                }
-                faqQuestions.forEach(otherQuestion => {
-                    if (otherQuestion !== question) {
-                        const otherAnswer = otherQuestion.nextElementSibling;
-                        const otherIcon = otherQuestion.querySelector('i');
-                        otherAnswer.classList.remove('active');
-                        if (otherIcon) {
-                            otherIcon.classList.remove('fa-chevron-up');
-                            otherIcon.classList.add('fa-chevron-down');
-                        }
-                    }
-                });
-            });
-        });
-    }
-    
     // Animazione al caricamento
     const animatedElements = document.querySelectorAll('.feature-card, .legal-section, .faq-item');
     animatedElements.forEach((element, index) => {
