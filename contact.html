@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatti - NutriSync</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-apple-alt" style="color: #4CAF50; margin-right: 10px;"></i>
+                    <span>NutriSync</span>
+                </a>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="help.html" class="nav-link">Aiuto</a>
+                <a href="privacy.html" class="nav-link">Privacy</a>
+                <a href="terms.html" class="nav-link">Termini</a>
+                <a href="contact.html" class="nav-link active">Contatti</a>
+            </div>
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Contact Content -->
+    <section class="section contact-page">
+        <div class="container">
+            <div class="contact-header">
+                <h1>Contattaci</h1>
+                <p class="subtitle">Siamo qui per aiutarti. Contattaci per qualsiasi domanda o problema.</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-form-container">
+                    <h2><i class="fas fa-envelope"></i> Invia un Messaggio</h2>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nome e Cognome *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Oggetto *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Seleziona un'opzione</option>
+                                <option value="support">Supporto Tecnico</option>
+                                <option value="feature">Richiesta Funzionalità</option>
+                                <option value="bug">Segnalazione Bug</option>
+                                <option value="account">Problemi Account</option>
+                                <option value="privacy">Privacy e Dati</option>
+                                <option value="other">Altro</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Messaggio *</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" required>
+                                Accetto l'<a href="privacy.html">informativa sulla privacy</a>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary btn-submit">
+                            <i class="fas fa-paper-plane"></i> Invia Messaggio
+                        </button>
+                    </form>
+                    
+                    <div id="formSuccess" class="success-message" style="display: none;">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Messaggio inviato con successo!</h3>
+                        <p>Ti risponderemo entro 24-48 ore lavorative.</p>
+                    </div>
+                </div>
+
+                <div class="contact-info-container">
+                    <div class="contact-info-card">
+                        <h2><i class="fas fa-info-circle"></i> Informazioni di Contatto</h2>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Email di Supporto</h3>
+                                <p>support@nutrisync.app</p>
+                                <p class="small">Rispondiamo entro 24 ore</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Privacy & Legal</h3>
+                                <p>privacy@nutrisync.app</p>
+                                <p class="small">Per questioni sulla privacy</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Sito Web</h3>
+                                <p>https://nutrisync.app</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-preview">
+                        <h3><i class="fas fa-question-circle"></i> Domande Frequenti</h3>
+                        <div class="faq-preview-item">
+                            <a href="help.html#account">
+                                <i class="fas fa-user"></i>
+                                Come recupero la password?
+                            </a>
+                        </div>
+                        <div class="faq-preview-item">
+                            <a href="help.html#features">
+                                <i class="fas fa-bell"></i>
+                                Come attivo le notifiche?
+                            </a>
+                        </div>
+                        <div class="faq-preview-item">
+                            <a href="help.html#technical">
+                                <i class="fas fa-sync-alt"></i>
+                                I dati non si sincronizzano
+                            </a>
+                        </div>
+                        <a href="help.html" class="btn-secondary btn-small">
+                            Vedi tutte le FAQ
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="response-time">
+                <div class="response-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Tempi di Risposta</h3>
+                    <ul>
+                        <li><strong>Supporto Tecnico:</strong> 24-48 ore lavorative</li>
+                        <li><strong>Segnalazioni Bug:</strong> 48-72 ore</li>
+                        <li><strong>Privacy e Legal:</strong> 72 ore lavorative</li>
+                    </ul>
+                </div>
+                
+                <div class="response-card">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Suggerimenti</h3>
+                    <p>Prima di contattarci, consulta la sezione <a href="help.html">Aiuto e FAQ</a> 
+                    dove potresti trovare subito la risposta al tuo problema.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>NutriSync</h3>
+                    <p>L'app di tracking nutrizionale che ti aiuta a raggiungere i tuoi obiettivi di salute.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Contatti</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> support@nutrisync.app</li>
+                        <li><i class="fas fa-globe"></i> https://nutrisync.app</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Link Utili</h3>
+                    <ul>
+                        <li><a href="help.html">Aiuto & FAQ</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Termini di Servizio</a></li>
+                        <li><a href="contact.html">Contattaci</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 NutriSync. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contactForm');
+            const formSuccess = document.getElementById('formSuccess');
+            
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // In un'applicazione reale, qui invieresti i dati al server
+                // Per ora simuliamo l'invio
+                
+                // Mostra animazione di caricamento
+                const submitBtn = contactForm.querySelector('.btn-submit');
+                const originalText = submitBtn.innerHTML;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Invio in corso...';
+                submitBtn.disabled = true;
+                
+                // Simula invio al server
+                setTimeout(() => {
+                    // Nascondi il form
+                    contactForm.style.display = 'none';
+                    
+                    // Mostra messaggio di successo
+                    formSuccess.style.display = 'block';
+                    formSuccess.scrollIntoView({ behavior: 'smooth' });
+                    
+                    // Reset button
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                    
+                    // Reset form
+                    contactForm.reset();
+                    
+                    // Dopo 10 secondi, ripristina il form
+                    setTimeout(() => {
+                        contactForm.style.display = 'block';
+                        formSuccess.style.display = 'none';
+                    }, 10000);
+                    
+                }, 2000);
+            });
+            
+            // Menu toggle per mobile
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            menuToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+            
+            // Chiudi menu quando si clicca un link
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

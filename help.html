@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aiuto e FAQ - NutriSync</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-apple-alt" style="color: #4CAF50; margin-right: 10px;"></i>
+                    <span>NutriSync</span>
+                </a>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="help.html" class="nav-link active">Aiuto</a>
+                <a href="privacy.html" class="nav-link">Privacy</a>
+                <a href="terms.html" class="nav-link">Termini</a>
+                <a href="contact.html" class="nav-link">Contatti</a>
+            </div>
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Help Content -->
+    <section class="section help-page">
+        <div class="container">
+            <div class="help-header">
+                <h1>Aiuto e Domande Frequenti</h1>
+                <p class="subtitle">Troviamo insieme le risposte alle tue domande</p>
+            </div>
+
+            <div class="search-section">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Cerca tra le domande frequenti...">
+                    <button class="search-btn">Cerca</button>
+                </div>
+            </div>
+
+            <div class="help-categories">
+                <div class="category-nav">
+                    <button class="category-btn active" data-category="all">Tutte le FAQ</button>
+                    <button class="category-btn" data-category="account">Account</button>
+                    <button class="category-btn" data-category="features">Funzionalità</button>
+                    <button class="category-btn" data-category="technical">Problemi Tecnici</button>
+                    <button class="category-btn" data-category="privacy">Privacy e Sicurezza</button>
+                </div>
+            </div>
+
+            <div class="faq-container">
+                <!-- Account FAQ -->
+                <div class="faq-category" id="account">
+                    <h2><i class="fas fa-user-circle"></i> Account e Registrazione</h2>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Come creo un account su NutriSync?
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Per creare un account su NutriSync:
+                            </p>
+                            <ol>
+                                <li>Apri l'app NutriSync sul tuo dispositivo Android</li>
+                                <li>Tocca "Registrati" o "Crea Account"</li>
+                                <li>Inserisci il tuo indirizzo email e scegli una password sicura</li>
+                                <li>Completa il tuo profilo con le informazioni richieste</li>
+                                <li>Conferma la tua email seguendo il link che riceverai</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Ho dimenticato la password, cosa devo fare?
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Se hai dimenticato la password:
+                            </p>
+                            <ol>
+                                <li>Nella schermata di login, tocca "Password dimenticata"</li>
+                                <li>Inserisci l'email associata al tuo account</li>
+                                <li>Controlla la tua posta elettronica e segui il link di reset</li>
+                                <li>Crea una nuova password seguendo le indicazioni</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Come elimino il mio account?
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Per eliminare il tuo account:
+                            </p>
+                            <ol>
+                                <li>Vai su "Impostazioni" nell'app</li>
+                                <li>Seleziona "Account"</li>
+                                <li>Tocca "Elimina Account"</li>
+                                <li>Segui le istruzioni per confermare l'eliminazione</li>
+                            </ol>
+                            <p class="warning">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                Attenzione: l'eliminazione dell'account è permanente e tutti i tuoi dati verranno cancellati.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Features FAQ -->
+                <div class="faq-category" id="features">
+                    <h2><i class="fas fa-star"></i> Funzionalità dell'App</h2>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Come aggiungo un pasto al diario?
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Per aggiungere un pasto:
+                            </p>
+                            <ol>
+                                <li>Apri la sezione "Diario" dall'app</li>
+                                <li>Tocca il pulsante "+" o "Aggiungi pasto"</li>
+                                <li>Seleziona il tipo di pasto (colazione, pranzo, cena, spuntino)</li>
+                                <li>Inserisci i dettagli del pasto (alimenti, quantità)</li>
+                                <li>L'app calcolerà automaticamente i valori nutrizionali</li>
+                                <li>Tocca "Salva" per aggiungere il pasto al diario</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Come attivo le notifiche promemoria?
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Per attivare le notifiche:
+                            </p>
+                            <ol>
+                                <li>Vai su "Impostazioni"</li>
+                                <li>Seleziona "Notifiche"</li>
+                                <li>Attiva l'interruttore "Notifiche"</li>
+                                <li>Tocca "Orario notifiche" per scegliere l'orario preferito</li>
+                                <li>Assicurati che le notifiche dell'app siano abilitate nelle impostazioni del dispositivo</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Come cambio tra tema chiaro e scuro?
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Per cambiare il tema dell'app:
+                            </p>
+                            <ol>
+                                <li>Vai su "Impostazioni"</li>
+                                <li>Seleziona "Aspetto"</li>
+                                <li>Attiva/disattiva "Modalità scura" per il tema manuale</li>
+                                <li>Oppure attiva "Segui sistema" per adattarsi automaticamente</li>
+                            </ol>
+                            <p>
+                                <i class="fas fa-lightbulb"></i>
+                                Suggerimento: il tema si applica immediatamente senza bisogno di riavviare l'app.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technical FAQ -->
+                <div class="faq-category" id="technical">
+                    <h2><i class="fas fa-tools"></i> Problemi Tecnici</h2>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            L'app si blocca o crasha, cosa posso fare?
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Se l'app si blocca:
+                            </p>
+                            <ol>
+                                <li><strong>Riavvia l'app:</strong> Chiudi completamente l'app e riaprila</li>
+                                <li><strong>Aggiorna l'app:</strong> Verifica su Play Store se ci sono aggiornamenti</li>
+                                <li><strong>Riavvia il dispositivo:</strong> Un riavvio del telefono può risolvere molti problemi</li>
+                                <li><strong>Libera spazio:</strong> Assicurati di avere spazio di archiviazione sufficiente</li>
+                                <li><strong>Reinstalla:</strong> Se il problema persiste, disinstalla e reinstalla l'app</li>
+                            </ol>
+                            <p>
+                                Se il problema continua, contatta il nostro supporto.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            I dati non si sincronizzano correttamente
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Per problemi di sincronizzazione:
+                            </p>
+                            <ol>
+                                <li>Verifica la connessione internet</li>
+                                <li>Assicurati di essere loggato con l'account corretto</li>
+                                <li>Controlla che l'app abbia i permessi necessari</li>
+                                <li>Prova a fare logout e login</li>
+                                <li>Forza la sincronizzazione manuale nelle impostazioni</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-support">
+                <div class="support-card">
+                    <div class="support-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Non hai trovato quello che cercavi?</h3>
+                    <p>Il nostro team di supporto è pronto ad aiutarti</p>
+                    <a href="contact.html" class="btn-primary">
+                        <i class="fas fa-envelope"></i> Contatta il Supporto
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>NutriSync</h3>
+                    <p>L'app di tracking nutrizionale che ti aiuta a raggiungere i tuoi obiettivi di salute.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Supporto</h3>
+                    <ul>
+                        <li><a href="help.html">Aiuto & FAQ</a></li>
+                        <li><a href="contact.html">Contatta Supporto</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Termini di Servizio</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Scarica</h3>
+                    <a href="https://play.google.com/store/apps/details?id=com.example.nutrisync" class="btn-download-small">
+                        <i class="fab fa-google-play"></i> Google Play
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 NutriSync. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/script.js"></script>
+    <script>
+        // FAQ accordion functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            const categoryButtons = document.querySelectorAll('.category-btn');
+            const faqCategories = document.querySelectorAll('.faq-category');
+            
+            // FAQ accordion
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const answer = question.nextElementSibling;
+                    const icon = question.querySelector('i');
+                    
+                    // Toggle current answer
+                    answer.classList.toggle('active');
+                    icon.classList.toggle('fa-chevron-down');
+                    icon.classList.toggle('fa-chevron-up');
+                    
+                    // Close other answers
+                    faqQuestions.forEach(otherQuestion => {
+                        if (otherQuestion !== question) {
+                            const otherAnswer = otherQuestion.nextElementSibling;
+                            const otherIcon = otherQuestion.querySelector('i');
+                            otherAnswer.classList.remove('active');
+                            otherIcon.classList.remove('fa-chevron-up');
+                            otherIcon.classList.add('fa-chevron-down');
+                        }
+                    });
+                });
+            });
+            
+            // Category filtering
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const category = button.dataset.category;
+                    
+                    // Update active button
+                    categoryButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    
+                    // Show/hide categories
+                    if (category === 'all') {
+                        faqCategories.forEach(cat => cat.style.display = 'block');
+                    } else {
+                        faqCategories.forEach(cat => {
+                            cat.style.display = cat.id === category ? 'block' : 'none';
+                        });
+                    }
+                });
+            });
+            
+            // Search functionality
+            const searchInput = document.querySelector('.search-box input');
+            const searchButton = document.querySelector('.search-btn');
+            
+            searchButton.addEventListener('click', performSearch);
+            searchInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') performSearch();
+            });
+            
+            function performSearch() {
+                const searchTerm = searchInput.value.toLowerCase();
+                if (!searchTerm) return;
+                
+                // Show all categories first
+                faqCategories.forEach(cat => cat.style.display = 'block');
+                
+                // Search in questions and answers
+                faqQuestions.forEach(question => {
+                    const questionText = question.textContent.toLowerCase();
+                    const answer = question.nextElementSibling;
+                    const answerText = answer.textContent.toLowerCase();
+                    
+                    if (questionText.includes(searchTerm) || answerText.includes(searchTerm)) {
+                        question.closest('.faq-item').style.display = 'block';
+                        question.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    } else {
+                        question.closest('.faq-item').style.display = 'none';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
